@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Selectors</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+        <section id="pageContainer">
+            <header>
+                <a href="/"><figure class="logo">Vanilla Javascript</figure></a>
+            </header>
+            <section id="main" class="grouping">
+                <div class="mainPageContainer">
+
+
+                    <div class="row">
+
+                        <div class="column50Left">
+                            <h3>Single Node Selectors</h3>
+                            
+                            <div class="row">
+                                <h4>getElementById<br>
+                                    getElementsByTagName<br>
+                                querySelector</h4> 
+                            </div>
+
+                        </div>
+
+
+                        <div class="column50Right">
+                            <h3>Collection Selectors</h3>
+
+                            <div class="row">
+                                <h4>getElementsByClassName<br>
+                                    
+                                    getElementsByTagName<br>
+                                    querySelectorAll</h4> 
+                            </div>
+                            <code>
+                                <pre>
+const items = document.getElementsByClassName('collection-item');
+console.log(items);
+console.log(items[0]);
+items[0].style.color = 'red';
+items[3].textContent = 'Hello';
+                                </pre>
+                            </code>
+                            <div class="row">
+                                <p>returns an HTML Collection</p>
+                                <p>convert to nodeList via Arrays.toList</p>
+
+                            </div>
+
+                            <div class="row">
+                                <h4>querySelectorAll</h4> 
+                            </div>
+                            <code>
+                                <pre>
+const items = document.querySelectorAll('ul.collection li.collection-item');
+
+items.forEach(function(item, index){
+item.textContent = `${index}: Hello`;
+});
+                                </pre>
+                            </code>
+                            <div class="row">
+                                <p>returns a Nodelist</p>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+            </section>
+
+        </section>
+
+
+
+
+    </body>
+</html>

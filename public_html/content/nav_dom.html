@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Navigating the DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+        <section id="pageContainer">
+            <header>
+                <a href="/"><figure class="logo">Vanilla Javascript</figure></a>
+            </header>
+            <section id="main" class="grouping">
+                <div class="mainPageContainer">
+
+
+                    <div class="row">
+
+
+
+
+                        <h3>Navigating the DOM</h3>
+
+                        <div class='column50Left'>
+                            <code>
+                                <pre>
+                                    
+
+  let val;
+
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
+
+val = listItem;
+val = list;
+
+// Get child nodes
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[3].nodeType;
+
+// Node Type number values
+// 1 - Element
+// 2 - Attribute (deprecated)
+// 3 - Text node
+// 8 - Comment
+// 9 - Document itself
+// 10 - Doctype
+
+
+// Get children element nodes
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = 'Hello';
+// Children of children
+list.children[3].children[0].id = 'test-link';
+val = list.children[3].children[0];
+
+// First child
+val = list.firstChild;
+val = list.firstElementChild;
+
+// Last child
+val = list.lastChild;
+val = list.lastElementChild;
+
+// Count child elements
+val = list.childElementCount;
+
+// Get parent node
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+
+// Get next sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+// Get prev sibling
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
+console.log(val);
+
+
+                                </pre>
+
+
+
+                            </code>
+
+
+
+
+
+                        </div>
+
+                        <div class='column50Right'>
+                            
+                            In the code on the left, there are attributes such 
+                            as  firstChild and firstElementChild. The difference
+                            is that firstElementChild is the first non-text node, 
+                            whereas firstChild may or may not be a text node. Element
+                            collections do not contain the text nodes that represent white space.
+                            
+                            
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </section>
+
+        </section>
+
+
+
+
+    </body>
+</html>

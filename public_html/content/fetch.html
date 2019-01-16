@@ -26,7 +26,7 @@
                         <div class="column50Right">
 
 
-
+                            <h3 class="row">Application API</h3>
                             <div class="form">
 
 
@@ -47,7 +47,7 @@
 
 
 
-                            <div class="row column50Right">Basic Fetch (Requires Start <a target="_blank" href="https://donhenton-spring-boot.herokuapp.com/swagger-ui.html">here</a>)</div>
+                            <div class="row">Basic Fetch (Requires Start <a target="_blank" href="https://donhenton-spring-boot.herokuapp.com/swagger-ui.html">here</a>)</div>
 
 
                             <div class="row">
@@ -55,11 +55,62 @@
                                     Github Gist
                                 </a> 
                             </div>
+
+
+                            <h3 class="row">CORS Test (GET)</h3>
+                            <div class="form">
+
+
+
+                                <table class="table table-striped">
+                                    <tr><td><input name="fetch_cors" id="fetch_cors" type="text" size="50"></td>
+                                        <td> <button onclick="fetchCORs()" class="btn btn-primary">Fetch CORS</button></td>
+                                    </tr>
+
+                                </table>
+
+
+
+                            </div>
+                            <div class="row">
+                                <em><b>This will require Mountebank running the restaurant system</b></em>
+                            </div>
+
+
+
+
+
+                            <h3 class="row">CORS Test Post</h3>
+                            <div class="form">
+
+
+                                <button onclick="fetchCORsPost()" class="btn btn-primary">Fetch Post</button> 
+                            </div>
+
+
+
+
+
+
+
+
+
+
                         </div>
 
                     </div>
+                    <div class="row">
+                        <hr/>
+                    </div>
+                    <div class="row">
+                        Fetch apparently automatically handles CORs requests. If Mountebank is not configured as below, the CORs requests will fail
+                    </div>
+                    <div class="row">
+
+                        <img src="../img/CORS_settings.png" alt=""/>
 
 
+                    </div>
                 </div>
 
 

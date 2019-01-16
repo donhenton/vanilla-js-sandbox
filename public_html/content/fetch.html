@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Fetch Samples</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+        <section id="pageContainer">
+            <header>
+                <a href="/"><figure class="logo">Vanilla Javascript</figure></a>
+            </header>
+            <section id="main" class="grouping">
+                <div class="mainPageContainer">
+
+                    <h3>Fetch Examples</h3>
+                    <div class="row">
+
+                        <div class="column50Left">
+                            <textarea id="text_report" class="output"></textarea>
+                        </div>
+
+                        <div class="column50Right">
+
+
+                            <h3 class="row">Application API</h3>
+                            <div class="form">
+
+
+
+                                <table class="table table-striped">
+                                    <tr><td><input name="fetch_param" id="fetch_param" type="text" size="50"></td>
+                                        <td> <button onclick="fetchApps()" class="btn btn-primary">Fetch</button></td>
+                                    </tr>
+
+                                </table>
+
+
+
+                            </div>
+
+
+
+
+
+
+                            <div class="row">Basic Fetch (Requires Start <a target="_blank" href="https://donhenton-spring-boot.herokuapp.com/swagger-ui.html">here</a>)</div>
+
+
+                            <div class="row">
+                                <a href=" https://gist.github.com/odewahn/5a5eeb23279eed6a80d7798fdb47fe91">
+                                    Github Gist
+                                </a> 
+                            </div>
+
+
+                            <h3 class="row">CORS Test (GET)</h3>
+                            <div class="form">
+
+
+
+                                <table class="table table-striped">
+                                    <tr><td><input name="fetch_cors" id="fetch_cors" type="text" size="50"></td>
+                                        <td> <button onclick="fetchCORs()" class="btn btn-primary">Fetch CORS</button></td>
+                                    </tr>
+
+                                </table>
+
+
+
+                            </div>
+                            <div class="row">
+                                <em><b>This will require Mountebank running the restaurant system</b></em>
+                            </div>
+
+
+
+
+
+                            <h3 class="row">CORS Test Post</h3>
+                            <div class="form">
+
+
+                                <button onclick="fetchCORsPost()" class="btn btn-primary">Fetch Post</button> 
+                            </div>
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <hr/>
+                    </div>
+                    <div class="row">
+                        Fetch apparently automatically handles CORs requests. If Mountebank is not configured as below, the CORs requests will fail
+                    </div>
+                    <div class="row">
+
+                        <img src="../img/CORS_settings.png" alt=""/>
+
+
+                    </div>
+                </div>
+
+
+
+            </section>
+
+        </section>
+
+
+        <script src="../js/fetch/fetch_samples.js" type="text/javascript"></script>
+
+    </body>
+</html>
